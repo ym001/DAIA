@@ -236,15 +236,15 @@ for idx_train, idx_test in skf.split(xfold):
 		
 		acc=sklearn.metrics.accuracy_score(train_origin.iloc[idx_test]['labels'].values.tolist(),label_predits)
 		acc_cross_validation.append(acc)
-		print("da {} {} {} acc :{} = {} ep:{}  max_seq_length : {}".format(model_name,p.jeux,len(train_origin),np.mean(acc_cross_validation),acc_cross_validation,EPOCH,classification.max_seq_length))
+		print("da {} {} acc :{} = {} ep:{}  max_seq_length : {}".format(model_name,len(train_origin),np.mean(acc_cross_validation),acc_cross_validation,EPOCH,classification.max_seq_length))
 		acc_augmentation=sklearn.metrics.accuracy_score(train_origin.iloc[idx_test]['labels'].values.tolist(),label_predits_inference_augmentation)
 		acc_cross_validation_augmentation.append(acc_augmentation)
-		print("daia {} {} {} acc :{} = {} ep:{}  max_seq_length : {}".format(model_name,p.jeux,len(train_origin),np.mean(acc_cross_validation_augmentation),acc_cross_validation_augmentation,EPOCH,classification.max_seq_length))
+		print("daia {} {} acc :{} = {} ep:{}  max_seq_length : {}".format(model_name,len(train_origin),np.mean(acc_cross_validation_augmentation),acc_cross_validation_augmentation,EPOCH,classification.max_seq_length))
 	
 	else:
 		label_predits=np.argmax(predictions, axis=1)
 		acc=sklearn.metrics.accuracy_score(train_origin.iloc[idx_test]['labels'].values.tolist(),label_predits)
 		acc_cross_validation.append(acc)
-		print("{} {} {} acc :{} = {} ep:{}  max_seq_length : {}".format(model_name,p.jeux,len(train_origin),np.mean(acc_cross_validation),acc_cross_validation,EPOCH,classification.max_seq_length))
+		print("{} {} acc :{} = {} ep:{}  max_seq_length : {}".format(model_name,len(train_origin),np.mean(acc_cross_validation),acc_cross_validation,EPOCH,classification.max_seq_length))
 
 print('End of script.')
