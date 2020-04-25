@@ -29,7 +29,7 @@ from sklearn.datasets import fetch_20newsgroups
 
 class Data:  
 	
-	def __init__(self,taille_par_nb_echantillon=True,pourcentage_de_la_base=False,nb_echantillon=5000): # constructeur
+	def __init__(self,taille_par_nb_echantillon=True,pourcentage_de_la_base=False,nb_echantillon=500): # constructeur
 		self.pourcentage_de_la_base=pourcentage_de_la_base
 		self.taille_par_nb_echantillon=taille_par_nb_echantillon
 		self.nb_echantillon=nb_echantillon

@@ -21,6 +21,8 @@
 #  MA 02110-1301, USA.
 #  
 #  
+import pandas as pd 
+import numpy as np # linear algebra
 
 ##############
 #augmentation
